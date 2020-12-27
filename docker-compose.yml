@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    image: php:7.4-apache
+    container_name: php74apache
+    volumes:
+    - ../code:/var/www/html
+    - ../php-oop:/var/www/html/php-oop
+    - ../phpCourse:/var/www/html/php-course
+    ports:
+    - 8000:80
